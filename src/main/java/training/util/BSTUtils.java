@@ -29,7 +29,7 @@ public class BSTUtils {
 
     private static BST createTree(BSTFileDto bstFileDto) {
         Map<String, BSTFileRowDto> nodeMap = new HashMap<>();
-        bstFileDto.getNodes().forEach(f -> nodeMap.put(f.getId(), f));
+        bstFileDto.getNodes().forEach(node -> nodeMap.put(node.getId(), node));
         BSTFileRowDto BSTFileRowDto = nodeMap.get(bstFileDto.getRootNodeValue());
         return createNode(BSTFileRowDto, nodeMap);
     }
