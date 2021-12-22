@@ -7,6 +7,7 @@ import static java.util.Collections.swap;
 
 public class Permutations {
 
+    // O(n^2*n!) time
     public static List<List<Integer>> getPermutations1(List<Integer> list) {
         List<List<Integer>> perms = new ArrayList<List<Integer>>();
         getPermutations1(list, new ArrayList<Integer>(), perms);
@@ -27,6 +28,7 @@ public class Permutations {
         }
     }
 
+    // O(n*n!) time
     public static List<List<Integer>> getPermutations2(List<Integer> list) {
         List<List<Integer>> perms = new ArrayList<List<Integer>>();
         getPermutations2(0, list, perms);
